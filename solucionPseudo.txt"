@@ -1,0 +1,6 @@
+inicio
+	Escribe "Introduce el precio unitario en euros (0 para terminar):"
+	Lee precio_ud
+	Escribe "Introduce el número de unidades:"
+	Lee num_ud
+fin
