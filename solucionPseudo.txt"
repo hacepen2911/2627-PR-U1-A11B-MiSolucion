@@ -46,10 +46,10 @@ inicio
 		total_descuento = (precio_total * porcentaje_descuento) / 100
 		precio_final = precio_total - total_descuento
 
-		Escribir "RESUMEN DE LA COMPRA"
-	    Escribir "Unidades compradas: " + total_ud
-	    Escribir "Importe antes del descuento: " + precio_total + " euros"
- 		Escribir "Descuento aplicado: " + porcentaje_descuento + " %"
-   	 	Escribir "Descuento: " + total_descuento + " euros"
-    	Escribir "Importe final: " + precio_final + " euros"
+	Escribir "RESUMEN DE LA COMPRA"
+	Escribir "Unidades compradas: " + total_ud
+	Escribir "Importe antes del descuento: " + precio_total + " euros"
+ 	Escribir "Descuento aplicado: " + porcentaje_descuento + " %"
+   	Escribir "Descuento: " + total_descuento + " euros"
+    Escribir "Importe final: " + precio_final + " euros"
 fin
