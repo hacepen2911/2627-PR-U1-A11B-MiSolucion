@@ -1,6 +1,55 @@
 inicio
+	Escribe "CAJA DE LA TIENDA"
+
+	total_ud = 0
+	precio_total = 0
+
 	Escribe "Introduce el precio unitario en euros (0 para terminar):"
 	Lee precio_ud
-	Escribe "Introduce el número de unidades:"
-	Lee num_ud
+	
+	Mientras precio_ud < 0
+		Escribe "El precio no puede ser negativo."
+		Escribe "Introduce el precio unitario en euros (0 para terminar):"
+		Lee precio_ud
+
+	Mientras precio_ud != 0
+		Escribe "Introduce el número de unidades:"
+		Lee num_ud
+
+		Mientras num_ud <=0
+			Escribe "La cantidad debe ser mayor que 0."
+			Escribe "Introduce el número de unidades:"
+			Lee num_ud
+		
+		total_ud = total_ud + num_ud
+		precio_total = precio_total + (precio_ud * num_ud)
+	
+		Escribe "Introduce el precio unitario en euros (0 para terminar):"
+		Lee precio_ud
+
+		Mientras precio_ud < 0
+			Escribe "El precio no puede ser negativo."
+			Escribe "Introduce el precio unitario en euros (0 para terminar):"
+			Lee precio_ud
+
+	Si total_ud == 0
+		Escribe "No se han registrado productos"
+	Sino
+		Si precio_total < 50
+			porcentaje_descuento = 0
+		Sino
+			Si precio_total < 100
+				porcentaje_descuento = 5
+			Sino
+				porcentaje_descuento = 10
+
+		total_descuento = (precio_total * porcentaje_descuento) / 100
+		precio_final = precio_total - total_descuento
+
+		Escribir "RESUMEN DE LA COMPRA"
+	    Escribir "Unidades compradas: " + total_ud
+	    Escribir "Importe antes del descuento: " + precio_total + " euros"
+ 		Escribir "Descuento aplicado: " + porcentaje_descuento + " %"
+   	 	Escribir "Descuento: " + total_descuento + " euros"
+    	Escribir "Importe final: " + precio_final + " euros"
 fin
